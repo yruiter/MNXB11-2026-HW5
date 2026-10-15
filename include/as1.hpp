@@ -9,7 +9,8 @@ namespace homework {
   // ptr a should get the value of ptr b
   // ptr b should get the value of ptr c
   // ptr c should get the value of ptr a
-  void swap_ptr(int* a, int* b, int *c);
+  void swap_ptr(int *a_ptr, int *b_ptr, int *c_ptr);
+
 
   
   // As 1.2 Unique data class (https://en.cppreference.com/w/cpp/memory/unique_ptr.html)
@@ -19,17 +20,26 @@ namespace homework {
   // get returns the value stored in the heap
   // set sets the value stored in the heap
   // Hint: can use pointer arithmetics on a unique_ptr
-  class UniqueData{
+
+
+  class UniqueData
+  {
     public:
+      //constructor stores the given integer 
       UniqueData(int value);
+      // returns the stored integer which is not changed 
       int get() const;
+      //this updates the integer that is stored 
       void set(int value);
 
 
     private:
+      // pointer to an integer 
       std::unique_ptr<int> data_;
 
   };
+
+
 
 
 } // namespace homework
