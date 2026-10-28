@@ -1,0 +1,42 @@
+1. Describe briefly what a static/dynamic library is and some reasons to use one over the other
+
+The code of a static library is copied directly into the executable at comiple time while, the code of a dynamic library is external 
+and is loaded when the proramm is compiling. Preference over one or the othe can depend on runtime dependencies or smaller executable size. 
+
+
+2. What flags would you need to pass to the linker to tell it to look for library files in a directory called /some/dir/lib and to link to a library file called libfmt-3.2.0.so?
+
+-L/some/dir/lib -lfmt-3.2.0
+
+-L specifies directories to search for libraries. 
+
+3. Describe the four parts of a function definition. What parts of the definition constitute the function's signature?
+
+Return type ; what type of data do you expect back 
+Function name; how to call the function 
+Parameter list; whay type of parameters we have 
+Function body: the function itself 
+    The function signature consists of the return type and the function name.
+
+4. Given an object like int x{3}; How would you get its address?
+Using  a pointer and the adress of operator x by & 
+int* ptr = &x;
+
+4.2. How would you write the type of a pointer to the object?
+int* 
+
+
+Write the class declaration for a 2D point class consisting of an x and a y coordinate a destructor, and two constructors  (declaration is sufficient):
+A default constructor
+A constructor taking two parameters, one for each pointer
+
+class Point {
+private:
+    double x;
+    double y;
+
+public:
+    Point();                    // default constructor
+    Point(double x, double y);  // 2-parameter constructor
+    ~Point();                   // is the destructor
+};
